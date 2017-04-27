@@ -1,0 +1,1 @@
+CREATE DATABASE sandbox CHARASET SET utf8mb4;
