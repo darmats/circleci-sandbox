@@ -1,6 +1,10 @@
 machine:
+  environment:
+    DEBIAN_FRONTEND: noninteractive
   php:
     version: 7.1.3
+  services:
+    - docker
 
 test:
   override:
@@ -9,3 +13,7 @@ test:
 database:
   override:
     - mysql -u ubuntu < provisioning/circleci/database-setup.sql
+
+dependencies:
+  pre:
+    - docker run -e MYSQL_ALLOW_EMPTY_PASSWORD=1 -p 3307:3306 -d mysql:5.6
