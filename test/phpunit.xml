@@ -1,7 +1,7 @@
 <phpunit colors="true">
     <testsuites>
         <testsuite>
-            <directory sufufix="Test.php">test</directory>
+            <directory sufufix="Test.php">./</directory>
         </testsuite>
     </testsuites>
 </phpunit>
