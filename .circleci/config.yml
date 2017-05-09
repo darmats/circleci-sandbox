@@ -14,6 +14,7 @@ jobs:
       TZ: "/usr/share/zoneinfo/Asia/Tokyo"
 
     steps:
-      - checkout
-      - run: pwd
       - run: ls -la
+      - checkout
+      - run: ls -la
+      - run: cd test && ../vendor/bin/phpunit
