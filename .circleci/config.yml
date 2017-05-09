@@ -14,7 +14,6 @@ jobs:
       TZ: "/usr/share/zoneinfo/Asia/Tokyo"
 
     steps:
-      - run: ls -la
       - checkout
-      - run: ls -la
+      - run: php composer.phar install
       - run: cd test && ../vendor/bin/phpunit
