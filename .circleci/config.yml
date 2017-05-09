@@ -15,4 +15,5 @@ jobs:
 
     steps:
       - checkout
-      - run: cd tests && ../vendor/bin/phpunit
+      - run: pwd
+      - run: ls -la
