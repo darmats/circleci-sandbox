@@ -1,0 +1,1 @@
+CREATE DATABASE sandbox CHARACTER SET utf8mb4;
