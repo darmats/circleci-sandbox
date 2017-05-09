@@ -12,7 +12,8 @@ test:
 
 database:
   override:
-    - mysql -uroot -h 127.0.0.1 -P 3307 < provisioning/circleci/database-setup.sql
+    - mysql -uroot -h 127.0.0.1 -P 3307 < ~/provisioning/circleci/database-setup.sql
+    - mysql -uroot -h 127.0.0.1 -P 3307 -e "CREATE DATABASE sandbox2 CHARACTER SET utf8mb4;"
 
 dependencies:
   pre:
