@@ -15,5 +15,3 @@ jobs:
 
     steps:
       - checkout
-      - run: php composer.phar install
-      - run: cd test && ../vendor/bin/phpunit
