@@ -11,9 +11,3 @@ jobs:
 
     steps:
       - run: pwd
-      - run:
-        name: Create Database
-        command: mysql < provisioning/circleci/database-setup.sql
-      - run:
-        name: Run Tests
-        command: cd test && ../vendor/bin/phpunit
