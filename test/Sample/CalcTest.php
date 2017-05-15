@@ -17,6 +17,6 @@ class CalcTest extends PHPUnit_Framework_TestCase
 
     public function testAdd()
     {
-        self::assertSame(1, $this->calc->add(1, 2));
+        self::assertSame(3, $this->calc->add(1, 2));
     }
 }
