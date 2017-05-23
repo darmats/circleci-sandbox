@@ -2,7 +2,7 @@
 
 namespace Sample;
 
-class Calc
+class Calculator
 {
     public function add($a, $b)
     {
