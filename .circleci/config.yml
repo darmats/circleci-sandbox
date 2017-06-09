@@ -18,7 +18,7 @@ jobs:
 #      - run: php composer.phar install
       - run:
           command: |
-            apt-get update
-            apt-get install git
+            apt-get -y update
+            apt-get -y install git
             php composer.phar remove phpunit/php-invoker --dev
       - run: cd test && ../vendor/bin/phpunit
