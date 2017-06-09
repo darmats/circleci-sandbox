@@ -3,22 +3,22 @@ jobs:
   build:
     working_directory: ~/sandbox
     docker:
-      - image: php:7.1.3
-      - image: mysql:5.6
-        environment:
-          MYSQL_ALLOW_EMPTY_PASSWORD: 1
-          TZ: "/usr/share/zoneinfo/Asia/Tokyo"
+#      - image: php:7.1.3
+#      - image: mysql:5.6
+#        environment:
+#          MYSQL_ALLOW_EMPTY_PASSWORD: 1
+#          TZ: "/usr/share/zoneinfo/Asia/Tokyo"
+      - image: centos:7.2
 
-    environment:
-      DEBIAN_FRONTEND: noninteractive
-      TZ: "/usr/share/zoneinfo/Asia/Tokyo"
-
-    steps:
-      - checkout
-#      - run: php composer.phar install
-      - run:
-          command: |
-            apt-get -y update
-            apt-get -y install git
-            php composer.phar remove phpunit/php-invoker --dev
-      - run: cd test && ../vendor/bin/phpunit
+#    environment:
+#      DEBIAN_FRONTEND: noninteractive
+#      TZ: "/usr/share/zoneinfo/Asia/Tokyo"
+#
+#    steps:
+#      - checkout
+#      - run:
+#          command: |
+#            apt-get -y update
+#            apt-get -y install git
+#            php composer.phar remove phpunit/php-invoker --dev
+#      - run: cd test && ../vendor/bin/phpunit
