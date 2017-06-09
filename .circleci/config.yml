@@ -14,8 +14,8 @@ jobs:
 #      DEBIAN_FRONTEND: noninteractive
 #      TZ: "/usr/share/zoneinfo/Asia/Tokyo"
 #
-#    steps:
-#      - checkout
+    steps:
+      - checkout
 #      - run:
 #          command: |
 #            apt-get -y update
