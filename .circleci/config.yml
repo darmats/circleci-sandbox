@@ -17,17 +17,38 @@ jobs:
 #
     steps:
       - checkout
-      - run:
-          command: |
-            sudo apt-get install wget lsb-release debconf-utils
-            sudo apt-get update
-            wget https://dev.mysql.com/get/mysql-apt-config_0.8.6-1_all.deb
-            sudo dpkg -i mysql-apt-config_0.8.6-1_all.deb
-            sudo apt-get update
-            sudo apt-get install mysql-client
-      - run:
-          command: |
-            mysql --version
+#      - run:
+#          command: |
+#            sudo apt-get install wget lsb-release debconf-utils
+#            sudo apt-get update
+#            wget https://dev.mysql.com/get/mysql-apt-config_0.8.6-1_all.deb
+#            echo <<EOT > test.pressed
+#            # Enable or disable MySQL tools and utilities
+#            mysql-apt-config mysql-apt-config/select-tools select Enabled
+#            mysql-apt-config mysql-apt-config/unsupported-platform select abort
+#            # Which MySQL product do you wish to configure?
+#            # Choices: MySQL Server & Cluster (Currently selected: mysql-5.6), MySQL Tools & Connectors (Currently selected: Enabled), MySQL Preview Packages (Currently selected: Disabled), Ok
+#            mysql-apt-config mysql-apt-config/select-product select Ok
+#            mysql-apt-config mysql-apt-config/repo-codename select jessie
+#            # Enable or disable MySQL preview packages
+#            mysql-apt-config mysql-apt-config/select-preview select Disabled
+#            # Provide MySQL repo location:
+#            mysql-apt-config mysql-apt-config/repo-url string http://repo.mysql.com/apt
+#            mysql-apt-config mysql-apt-config/repo-distro select debian
+#            # MySQL 8.0-DMR
+#            mysql-apt-config mysql-apt-config/dmr-warning note
+#            # Choices: mysql-5.6, mysql-5.7, mysql-8.0 preview, mysql-cluster-7.5, mysql-cluster-7.6, None
+#            mysql-apt-config mysql-apt-config/select-server select mysql-5.6
+#            mysql-apt-config mysql-apt-config/tools-component string mysql-tools
+#            mysql-apt-config mysql-apt-config/preview-component string
+#            EOT
+#            sudo debconf-set-selections test.pressed
+#            sudo dpkg -i mysql-apt-config_0.8.6-1_all.deb
+#            sudo apt-get update
+#            sudo apt-get install mysql-client
+#      - run:
+#          command: |
+#            mysql --version
 #      - run:
 #          command: |
 #            apt-get -y update
