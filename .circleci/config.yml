@@ -24,10 +24,14 @@ jobs:
             wget https://dev.mysql.com/get/mysql-apt-config_0.8.6-1_all.deb
             echo <<EOT | sudo debconf-set-selections
             mysql-apt-config mysql-apt-config/select-server select mysql-5.6
+            mysql-apt-config mysql-apt-config/select-product select Ok
             EOT
             sudo dpkg -i mysql-apt-config_0.8.6-1_all.deb
             sudo apt-get update
             sudo apt-get install mysql-client
+      - run:
+          command: |
+            mysql --version
 #      - run:
 #          command: |
 #            apt-get -y update
