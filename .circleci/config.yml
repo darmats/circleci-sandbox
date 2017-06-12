@@ -22,7 +22,7 @@ jobs:
             sudo apt-get install wget lsb-release debconf-utils
             sudo apt-get update
             wget https://dev.mysql.com/get/mysql-apt-config_0.8.6-1_all.deb
-            echo <<EOT | > test.pressed
+            echo <<EOT > test.pressed
             # Enable or disable MySQL tools and utilities
             mysql-apt-config mysql-apt-config/select-tools select Enabled
             mysql-apt-config mysql-apt-config/unsupported-platform select abort
