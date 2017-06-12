@@ -11,9 +11,9 @@ jobs:
           MYSQL_ALLOW_EMPTY_PASSWORD: 1
           TZ: "/usr/share/zoneinfo/Asia/Tokyo"
 
-#    environment:
-#      DEBIAN_FRONTEND: noninteractive
-#      TZ: "/usr/share/zoneinfo/Asia/Tokyo"
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+      TZ: "/usr/share/zoneinfo/Asia/Tokyo"
 #
     steps:
       - checkout
