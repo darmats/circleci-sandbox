@@ -7,9 +7,9 @@ jobs:
 #      - image: centos:7.2.1511
       - image: circleci/php:7.1.4
       - image: mysql:5.6
-          environment:
-            MYSQL_ALLOW_EMPTY_PASSWORD: 1
-            TZ: "/usr/share/zoneinfo/Asia/Tokyo"
+#        environment:
+#          MYSQL_ALLOW_EMPTY_PASSWORD: 1
+#          TZ: "/usr/share/zoneinfo/Asia/Tokyo"
 
 #    environment:
 #      DEBIAN_FRONTEND: noninteractive
