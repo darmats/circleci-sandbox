@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/sandbox
     docker:
-      - image: circleci/php:7.2.12
+      - image: circleci/php:7.2.12-apache-browsers-legacy
     steps:
       - checkout
       - restore_cache:
